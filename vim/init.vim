@@ -59,10 +59,10 @@ Plug 'janko-m/vim-test'
 call plug#end()
 
 " Settings
-source $DOT/vim/settings.vim
+source $DOTFILES/vim/settings.vim
 
 " Themes
-source $DOT/vim/themes.vim
+source $DOTFILES/vim/themes.vim
 
 " Deoplete
 source $DOT/vim/deoplete.vim
@@ -71,31 +71,35 @@ source $DOT/vim/deoplete.vim
 source $DOT/vim/python.vim
 
 " Go
-source $DOT/vim/go.vim
+source $DOTFILES/vim/go.vim
 
 " Testing
 source $DOT/vim/test.vim
 
 " Snippets
-source $DOT/vim/snippets.vim
+source $DOTFILES/vim/snippets.vim
 
 " Git
-source $DOT/vim/git.vim
+source $DOTFILES/vim/git.vim
 
 " Nerd
-source $DOT/vim/nerd.vim
+source $DOTFILES/vim/nerd.vim
 
 " Easymotion
-source $DOT/vim/easymotion.vim
+source $DOTFILES/vim/easymotion.vim
 
 " Tagbar
-source $DOT/vim/tagbar.vim
+source $DOTFILES/vim/tagbar.vim
 
 " CtrlP
-source $DOT/vim/ctrlp.vim
+source $DOTFILES/vim/ctrlp.vim
 
 " Neomake
+<<<<<<< HEAD
 source $DOT/vim/neomake.vim
  
 " Neoformat
 source $DOT/vim/Neoformat.vim
+=======
+source $DOTFILES/vim/neomake.vim
+>>>>>>> 9ef2364... Use DOTFILES instead of DOT env var
