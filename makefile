@@ -2,7 +2,6 @@ TOPTARGETS := all link install upgrade
 SUBDIRS := $(subst /.,,$(wildcard */.))
 
 LINKCMD := @echo ln -s
-BREWCMD := @echo brew
 
 $(TOPTARGETS): $(SUBDIRS)
 $(SUBDIRS):
