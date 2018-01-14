@@ -7,3 +7,7 @@ export ZSH_CUSTOM="$DOTFILES/zsh/custom"
 export ZSH="$DOTFILES/zsh/oh-my-zsh"
 source "$ZSH/oh-my-zsh.sh"
 
+export VIRTUALENVWRAPPER_PYTHON="$(which python2)"
+source virtualenvwrapper.sh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

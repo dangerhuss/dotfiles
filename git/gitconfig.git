@@ -1,12 +1,13 @@
 # This is Git's per-user configuration file.
 [user]
 	name = Andrew Huss
-	email = git@ahuss.com
+	email = ahuss@apple.com
 
 [alias]
 	stats = ! /usr/local/bin/git-quick-stats
 	quick-stats = ! /usr/local/bin/git-quick-stats
+	sm = submodule
 [push]
-	default = upstream
+	default = current
 [pull]
-	default = upstream
+	default = current

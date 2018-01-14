@@ -12,6 +12,12 @@ elseif profile == 'dark'
 	colorscheme solarized
 	let g:solarized_termcolors=256
 	"let g:solarized_contrast='high'
-else
+elseif profile == 'black'
 	set background=dark
+	let g:solarized_termcolors=256
+	let g:solarized_contrast='high'
+else
+	set background=light
+	"colorscheme solarized
+	"let g:solarized_termcolors=256
 endif

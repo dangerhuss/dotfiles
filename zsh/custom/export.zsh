@@ -7,8 +7,8 @@ export ZSH_CUSTOM="$DOT/zsh/custom"
 
 # Brew
 export BREW="$DOT/brew/homebrew"
-export PATH="$PATH:$BREW/bin"
+export PATH="$BREW/bin:$PATH"
 
 # GO
 export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
+export PATH="$GOPATH/bin:$PATH"

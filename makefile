@@ -1,16 +1,16 @@
 TOPTARGETS := all link install upgrade
 SUBDIRS := $(subst /.,,$(wildcard */.))
 
-LINKCMD := @echo ln -s
+LINKCMD := @echo ln -nsf
 BREWCMD := @echo brew
 
 $(TOPTARGETS): $(SUBDIRS)
 $(SUBDIRS):
-	@if [ -f '$@/makefile' ]; then $(MAKE) -C $@ LINKCMD="$(LINKCMD)" $(MAKECMDGOALS); fi 
+	@if [ -f '$@/makefile' ]; then $(MAKE) -C $@ LINKCMD="$(LINKCMD)" BREWCMD="$(BREWCMD)" $(MAKECMDGOALS); fi 
 help:
 	@echo $(SUBDIRS)
 %: help
 
 
-.PHONY: $(TOPTARGETS)
+.PHONY: $(TOPTARGETS) $(SUBDIRS) help
 

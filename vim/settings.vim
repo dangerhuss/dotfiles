@@ -1,5 +1,5 @@
-"let g:python_host_prog = '/Volumes/Data/dotfiles/virtualenvs/neovim2/bin/python'
-"let g:python3_host_prog = '/Volumes/Data/dotfiles/virtualenvs/neovim3/bin/python'
+let g:python_host_prog = '/Users/ah/.virtualenvs/neovim/bin/python2'
+let g:python3_host_prog = '/Users/ah/.virtualenvs/neovim/bin/python3'
 
 syntax enable
 
@@ -40,6 +40,10 @@ nnoremap <Space> <Nop>
 " VIMRC
 nmap <silent> <leader>ev :e $DOT/vim/init.vim<CR>  " edit
 nmap <silent> <leader>sv :so $DOT/vim/init.vim<CR> " source
+
+" Resize Width
+nnoremap <silent> <Leader>+ :exe "vertical resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "vertical resize " . (winheight(0) * 2/3)<CR>
 
 " Window
 nmap <leader>swh :topleft  vnew<CR>

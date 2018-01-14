@@ -27,16 +27,20 @@ augroup END
 
 let g:go_echo_command_info=1
 
-let g:go_term_enabled = 1
+let g:go_term_enabled = 0
+let g:go_term_mode = "split"
+let g:go_term_height = 5 
+
+let g:go_list_type = "quickfix"
+
 let g:go_auto_type_info = 1
 
-let g:go_auto_sameids = 1
+let g:go_auto_sameids = 0
 let g:go_test_timeout = '1s'
 let g:go_fmt_command = "goimports"
-let g:go_doc_keywordprg_enabled = 1
+let g:go_doc_keywordprg_enabled = 0
 let g:go_def_mode = 'guru'
 let g:go_fmt_fail_silently = 0
-let g:go_metalinter_enabled = 1
 
 let g:go_highlight_array_whitespace_error = 1
 let g:go_highlight_chan_whitespace_error = 1
