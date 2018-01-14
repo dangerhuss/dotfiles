@@ -4,8 +4,6 @@
 	email = ahuss@apple.com
 
 [alias]
-	stats = ! /usr/local/bin/git-quick-stats
-	quick-stats = ! /usr/local/bin/git-quick-stats
 	sm = submodule
 [push]
 	default = current
