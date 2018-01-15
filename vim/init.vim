@@ -8,11 +8,15 @@ call plug#begin('~/src/plugged')
 Plug 'altercation/vim-colors-solarized'
 
 " Go
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+
+" Python
+Plug 'davidhalter/jedi-vim'
 
 " Deoplete
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'Shougo/deoplete.nvim', {'do': function('DoRemote')}
+Plug 'zchee/deoplete-go', {'do': 'make'}
+Plug 'zchee/deoplete-jedi'
 
 " Snippets
 Plug 'Shougo/neosnippet'

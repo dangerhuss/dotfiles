@@ -1,14 +1,12 @@
-LINKCMD := @ln -nsf
 BREWCMD := @brew
-DOTFILES := $(wildcard *.vim)
+LINKCMD := @ln -nsf
 
-%: install link
-install:
-	$(BREWCMD) install neovim/neovim/neovim
-upgrade: 
-	-$(BREWCMD) upgrade neovim/neovim/neovim
-link: $(DOTFILES) 
-init.vim:
-	$(LINKCMD) "$(realpath $@)" "$(HOME)/.config/nvim/init.vim"
+install: link
+	$(BREWCMD) install --HEAD neovim
+upgrade: install
+	$(BREWCMD) reinstall --HEAD neovim
+link: $(wildcard *.vim)
+%.vim:
+	$(LINKCMD) "$(realpath $@)" "$(HOME)/.config/nvim/$@"
 
-.PHONY: $(DOTFILES)
+.PHONY: upgrade install link

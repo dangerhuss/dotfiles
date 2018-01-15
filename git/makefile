@@ -1,14 +1,15 @@
-LINKCMD := @ln -nsf
 BREWCMD := @brew
-DOTFILES := $(wildcard *.git)
+LINKCMD := @ln -nsf
 
-%: install link
-install:
+install: link
 	$(BREWCMD) install git
-upgrade:
+	git submodule init
+upgrade: install
 	-$(BREWCMD) upgrade git
-link: $(DOTFILES) 
-gitconfig.git:
-	$(LINKCMD) "$(realpath $@)" "$(HOME)/.gitconfig"
+	git submodule update
 
-.PHONY: all install upgrade link $(DOTFILES)
+link: $(wildcard *.git) 
+%.git:
+	$(LINKCMD) "$(realpath $@)" "$(HOME)/.$*"
+
+.PHONY: upgrade install link

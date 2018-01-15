@@ -1,3 +1,4 @@
 {
-	"zshrc.zsh": "$HOME/.zshrc"
+	"zshrc.zsh": "$HOME/.zshrc",
+	"zshenv.zsh": "$HOME/.zshenv"
 }

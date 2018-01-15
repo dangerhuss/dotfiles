@@ -1,14 +1,15 @@
-LINKCMD := @ln -nsf
 BREWCMD := @brew
-DOTFILES := $(wildcard *.zsh)
+LINKCMD := @ln -nsf
 
-%: link
-install:
-	$(BREWCMD) install zsh || (echo "Install failed: $$"; exit 1)
-upgrade: 
+install: link
+	$(BREWCMD) install zsh
+	git submodule init
+upgrade: install
 	-$(BREWCMD) upgrade zsh
-link: $(DOTFILES) 
-zshrc.zsh:
-	$(LINKCMD) "$(realpath $@)" "$(HOME)/.zshrc"
+	git submodule update
 
-.PHONY: upgrade link $(DOTFILES)
+link: $(wildcard *.zsh)
+%.zsh:
+	$(LINKCMD) "$(realpath $@)" "$(HOME)/.$*"
+
+.PHONY: upgrade install link
