@@ -21,3 +21,7 @@ cover_path() {
 cover_file() {
 	echo "`cover_path`/cover.out"
 }
+
+venv() {
+    [[ -n "$VIRTUAL_ENV" ]] && echo "[${VIRTUAL_ENV##*/}]"
+}

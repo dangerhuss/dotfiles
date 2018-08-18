@@ -25,6 +25,13 @@ augroup go
 	autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 augroup END
 
+let g:deoplete#ignore_sources.go = ['buffer', 'member']
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:deoplete#sources#go#align_class = 1
+let g:deoplete#sources#go#pointer = 1
+let g:deoplete#sources#go#use_cache = 1
+
+
 let g:go_echo_command_info=1
 
 let g:go_term_enabled = 0

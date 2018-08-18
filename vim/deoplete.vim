@@ -1,14 +1,12 @@
 " Deoplete
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:deoplete#sources#jedi#python_path = g:python3_host_prog
 let g:deoplete#enable_smart_case = 1
-let g:deoplete#auto_completion_start_length = 1
-let g:deoplete#sources#go#align_class = 1
-let g:deoplete#sources#go#pointer = 1
-let g:deoplete#sources#go#use_cache = 1
+let g:deoplete#auto_completion_start_length = 0
+let g:deoplete#setup_py_version = 'auto'
+let g:deoplete#sources#jedi#show_docstring = 1
 
 let g:deoplete#ignore_sources = {}
-let g:deoplete#ignore_sources.go = ['buffer', 'member']
 
 set completeopt=menuone,noinsert,noinsert,noselect
 
