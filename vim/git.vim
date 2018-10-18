@@ -5,7 +5,7 @@ noremap <leader>do :diffget <BAR> :diffupdate <CR>
 noremap <leader>dO :diffget <BAR> :diffupdate <CR> ]czz
 noremap <leader>gw :Gwq <CR>
 noremap <leader>gr :Gread <CR>
-noremap <leader>dd :Gdiff <CR>
+noremap <leader>dd :Gvdiff <CR>
 noremap <leader>gs :Gstatus <CR>
 noremap <leader>gl :Glog <CR>
 
