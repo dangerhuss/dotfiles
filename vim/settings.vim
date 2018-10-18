@@ -1,6 +1,3 @@
-"let g:python_host_prog = '/Volumes/Data/dotfiles/virtualenvs/neovim2/bin/python'
-"let g:python3_host_prog = '/Volumes/Data/dotfiles/virtualenvs/neovim3/bin/python'
-
 syntax enable
 
 set mouse=a 			 " enable mouse for (a)ll modes
@@ -22,6 +19,7 @@ set showtabline=0 		 " don't show the tabline
 set tags+=./.tags,.tags;$HOME
 
 " Statusline
+set noshowmode 			 " don't show the statusbar
 set statusline=
 set statusline+=%0*[\ %N\ ]%*             "buffer number
 set statusline+=%0*\ %<%F%*               "full path
@@ -41,6 +39,10 @@ nnoremap <Space> <Nop>
 nmap <silent> <leader>ev :e $DOT/vim/init.vim<CR>  " edit
 nmap <silent> <leader>sv :so $DOT/vim/init.vim<CR> " source
 
+" Resize Width
+nnoremap <silent> <Leader>+ :exe "vertical resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "vertical resize " . (winheight(0) * 2/3)<CR>
+
 " Window
 nmap <leader>swh :topleft  vnew<CR>
 nmap <leader>swl :botright vnew<CR>
@@ -50,13 +52,13 @@ nmap <leader>swj :botright new<CR>
 " Buffer
 set hidden
 nmap <leader>sh :leftabove  vnew<CR>
-tmap <leader>sh <C-\><C-n>:leftabove vnew<CR>
+"tmap <leader>sh <C-\><C-n>:leftabove vnew<CR>
 nmap <leader>sl :rightbelow vnew<CR>
-tmap <leader>sl <C-\><C-n>:rightbelow vnew<CR>
+"tmap <leader>sl <C-\><C-n>:rightbelow vnew<CR>
 nmap <leader>sk :leftabove  new<CR>
-tmap <leader>sk <C-\><C-n>:leftabove vnew<CR>
+"tmap <leader>sk <C-\><C-n>:leftabove vnew<CR>
 nmap <leader>sj :rightbelow new<CR>
-tmap <leader>sj <C-\><C-n>:rightbelow vnew<CR>
+"tmap <leader>sj <C-\><C-n>:rightbelow vnew<CR>
 nmap <C-l> :bnext<CR>
 tmap <C-l> <C-\><C-n> :bnext<CR>
 nnoremap <Right> :bnext<CR>
@@ -69,6 +71,7 @@ nnoremap <leader>Q :q<CR>
 tmap <leader>Q <C-\><C-n>:q<CR>
 
 " Terminal
+nnoremap <leader>T :term<CR>i
 tnoremap <C-[> <C-\><C-n>
 tnoremap <C-w>h <C-\><C-n><C-w>h
 tnoremap <C-w>j <C-\><C-n><C-w>j
