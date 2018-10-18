@@ -4,7 +4,7 @@ LINKCMD := @ln -nsf
 install: link
 	$(BREWCMD) install zsh
 	git submodule init
-upgrade: install
+upgrade:
 	-$(BREWCMD) upgrade zsh
 	git submodule update
 
