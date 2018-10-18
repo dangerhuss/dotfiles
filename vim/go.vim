@@ -30,7 +30,7 @@ let g:go_echo_command_info=1
 let g:go_term_enabled = 1
 let g:go_auto_type_info = 1
 
-let g:go_auto_sameids = 1
+let g:go_auto_sameids = 0
 let g:go_test_timeout = '1s'
 let g:go_fmt_command = "goimports"
 let g:go_doc_keywordprg_enabled = 1
