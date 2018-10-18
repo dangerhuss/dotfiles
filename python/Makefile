@@ -6,7 +6,7 @@ install:
 	pip2 install -r requirements.txt
 	pip3 install -r requirements.txt
 
-upgrade: install
+upgrade:
 	-$(BREWCMD) upgrade python2
 	-$(BREWCMD) upgrade python3
 	pip2 install -U -r requirements.txt
