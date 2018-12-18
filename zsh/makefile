@@ -2,7 +2,7 @@ BREWCMD := @brew
 LINKCMD := @ln -nsf
 
 install: link
-	$(BREWCMD) install zsh
+	-$(BREWCMD) install zsh
 	git submodule init
 upgrade:
 	-$(BREWCMD) upgrade zsh

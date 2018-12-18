@@ -24,8 +24,8 @@ fi
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # http://patorjk.com/software/taag/#p=display&f=Slant%20Relief&t=dangerhuss
-cat "$DOTFILES/dangerhuss.art"
+#cat "$DOTFILES/dangerhuss.art"
 
-if [ -z ${TMUX} ]; then
-        tmux new-session -A -s default
-fi
+#if [ -z ${TMUX} ]; then
+        #tmux new-session -A -s default
+#fi

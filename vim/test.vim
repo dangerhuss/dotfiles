@@ -19,5 +19,5 @@ let g:test#preserve_screen = 1
 "let test#python#runner = 'nose'
 "let g:test#runner_commands = ['Nose']
 let test#python#runner = 'djangotest'
-let test#python#djangotest#executable = 'docker-compose exec web python /code/manage.py test'
+let test#python#djangotest#executable = 'docker-compose exec web python /code/manage.py test -v2'
 "let g:test#runner_commands = ['docker-compose exec web manage.py test']

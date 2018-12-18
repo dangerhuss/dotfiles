@@ -1,8 +1,8 @@
 BREWCMD := @brew
 
 install:
-	$(BREWCMD) install python2
-	$(BREWCMD) install python3
+	-$(BREWCMD) install python2
+	-$(BREWCMD) install python3
 	pip2 install -r requirements.txt
 	pip3 install -r requirements.txt
 
