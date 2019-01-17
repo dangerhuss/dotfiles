@@ -56,6 +56,44 @@ Plug 'davidhalter/jedi-vim'
 " Testing
 Plug 'janko-m/vim-test'
 
+" Swift
+Plug 'w0rp/ale' " language checker
+Plug 'mitsuse/autocomplete-swift'
+Plug 'landaire/deoplete-swift'
+Plug 'kballard/vim-swift'
+Plug 'keith/swift.vim'
+Plug 'aciidb0mb3r/SwiftDoc.vim'
+Plug 'kentaroi/ultisnips-swift'
+Plug 'thinca/vim-quickrun'
+
+let g:tagbar_type_swift = {
+  \ 'ctagstype': 'swift',
+  \ 'kinds' : [
+    \ 'e:Enums',
+    \ 't:Typealiases',
+    \ 'p:Protocols',
+    \ 's:Structs',
+    \ 'c:Classes',
+    \ 'f:Functions',
+    \ 'v:Variables',
+    \ 'E:Extensions',
+    \ 'l:Constants',
+  \ ],
+  \ 'sort' : 0
+  \ }
+
+au FileType swift nmap <leader>r :QuickRun swiftrun<cr>
+au FileType swift nmap <leader>t :QuickRun swifttest<cr>
+"autocmd FileType swift imap <buffer> <C-k> <Plug>(autocomplete_swift_jump_to_placeholder)
+
+let g:clamp_autostart = 1
+let g:clamp_libclang_file = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
+
+let g:deoplete#sources#swift#source_kitten_binary = '/usr/local/bin/sourcekitten'
+let g:deoplete#sources#swift#daemon_autostart = 1
+
+nnoremap <leader>F :!swiftformat %<cr>
+
 call plug#end()
 
 " Settings

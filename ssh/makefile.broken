@@ -8,6 +8,7 @@ link: $(wildcard *.ssh)
 	$(LINKCMD) "$(realpath $@)" "$(HOME)/.ssh/$*"
 
 ssh: link
-	+$(MAKE) -C ~/.ssh
+	@mkdir -p "$(HOME)/.ssh"
+	+$(MAKE) -C "$(HOME)/.ssh"
 
 .PHONY: upgrade install link

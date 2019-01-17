@@ -17,11 +17,9 @@ export ZSH_THEME_GIT_PROMPT_CLEAN=" ✔"
 if [[ -n $VIRTUAL_ENV && -e "${VIRTUAL_ENV}/bin/activate" ]]; then
 	source "${VIRTUAL_ENV}/bin/activate"
 else
-	export VIRTUALENVWRAPPER_PYTHON=$(which python2)
+	export VIRTUALENVWRAPPER_PYTHON=$(which python)
 	source virtualenvwrapper.sh
 fi
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # http://patorjk.com/software/taag/#p=display&f=Slant%20Relief&t=dangerhuss
 #cat "$DOTFILES/dangerhuss.art"

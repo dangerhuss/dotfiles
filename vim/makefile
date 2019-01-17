@@ -20,9 +20,9 @@ venv:
 	~/.virtualenvs/neovim2/bin/pip install neovim
 	virtualenv ~/.virtualenvs/neovim3 -p python3
 	~/.virtualenvs/neovim3/bin/pip install neovim
-
-
-	
-	
+	~/.virtualenvs/neovim3/bin/pip install frosted
+	~/.virtualenvs/neovim3/bin/pip install pyflakes
+	~/.virtualenvs/neovim3/bin/pip install pydocstyle
+	~/.virtualenvs/neovim3/bin/pip install flake8
 
 .PHONY: upgrade install link

@@ -354,10 +354,12 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/src/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{899, 534}</string>
+	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -366,6 +368,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 263.000000, NO, NO</string>
+		<string>0.000000, 264.000000, 224.000000, 43.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -398,9 +405,8 @@
 	<dict>
 		<key>CurrentItems</key>
 		<array>
-			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
 			<string>tab bar</string>
-			<string>iTermTouchBarIdentifierStatus</string>
+			<string>iTermTouchBarIdentifierColorPreset</string>
 			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
 		</array>
 		<key>DefaultItems</key>
@@ -416,32 +422,26 @@
 			<string>iTermTouchBarIdentifierNextMark</string>
 		</array>
 	</dict>
-	<key>NSTouchBarConfig: regular</key>
-	<dict>
-		<key>CurrentItems</key>
-		<array>
-			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
-			<string>iTermTouchBarIdentifierStatus</string>
-			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
-		</array>
-		<key>DefaultItems</key>
-		<array>
-			<string>iTermTouchBarIdentifierManPage</string>
-			<string>iTermTouchBarIdentifierColorPreset</string>
-			<string>iTermTouchBarIdentifierFunctionKeys</string>
-			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
-			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
-			<string>iTermTouchBarIdentifierAddMark</string>
-			<string>iTermTouchBarIdentifierPreviousMark</string>
-			<string>iTermTouchBarIdentifierNextMark</string>
-		</array>
-	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>1583 257 551 77 0 0 2560 1440 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>3530 786 620 392 2560 0 2560 1440 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>630 284 606 469 0 0 2560 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>654 514 958 470 0 0 1680 1050 </string>
+	<string>176 434 1018 447 0 0 1440 900 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>98 316 592 584 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>212 106 665 452 0 0 1680 1050 </string>
+	<string>6 0 1434 900 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>212 106 570 452 0 0 1680 1050 </string>
+	<string>937 269 360 627 0 0 1440 900 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>1080 423 360 477 0 0 1440 900 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>260 452 591 417 0 0 1440 900 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
+	<string>281 444 703 402 0 0 1440 900 </string>
 	<key>NeverWarnAboutPossibleOverrides</key>
 	<true/>
 	<key>NeverWarnAboutPossibleOverrides_selection</key>
@@ -3139,7 +3139,9 @@
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
-	<key>NoSyncHaveRequestedFullDiskAccess</key>
+	<key>NoSyncHaveUsedCopyMode</key>
+	<true/>
+	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
 	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
@@ -3148,7 +3150,7 @@
 	<key>NoSyncInstallUtilitiesPackage_selection</key>
 	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
-	<string>92546953-1AF2-428C-BF7E-1BCF188DA848</string>
+	<string>20DD21B7-EDA7-44EB-B572-2C673174286B</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3156,7 +3158,9 @@
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>566787143.58885098</real>
+	<real>536533467.33211797</real>
+	<key>NoSyncTurnOffBracketedPasteOnHostChange</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -3192,22 +3196,26 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/ah/src/dotfiles</string>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=71</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=84</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-12-21T06:17:05Z</date>
+	<date>2018-10-19T00:34:50Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>StretchTabsToFillBar</key>
 	<false/>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1517247104</real>
 	<key>URLHandlersByGuid</key>
 	<dict>
 		<key>ssh</key>
@@ -3215,12 +3223,10 @@
 	</dict>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
-	<key>disableMetalWhenUnplugged</key>
-	<false/>
 	<key>findMode_iTerm</key>
 	<integer>4</integer>
 	<key>iTerm Version</key>
-	<string>3.2.6</string>
+	<string>3.2.2</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

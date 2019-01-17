@@ -10,7 +10,7 @@ if profile == 'light'
 	let g:lightline = { 'colorscheme': 'wombat' }
 elseif profile == 'dark'
 	set background=dark
-	"colorscheme solarized
+	colorscheme solarized
 	let g:lightline = { 'colorscheme': 'wombat' }
 	"let g:solarized_contrast='high'
 elseif profile == 'white'
@@ -24,7 +24,7 @@ elseif profile == 'black'
 	"colorscheme space-vim-dark
 	let g:lightline = { 'colorscheme': 'wombat' }
 else
-	set background=light
+	set background=dark
 	"colorscheme solarized
 	let g:lightline = { 'colorscheme': 'wombat' }
 endif

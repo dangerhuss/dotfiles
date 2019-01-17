@@ -17,9 +17,12 @@ set wildmenu                     " show a navigable menu for tab completion
 set wildmode=longest,list,full
 set showtabline=0 		 " don't show the tabline
 set tags+=./.tags,.tags;$HOME
+"set shortmess=filnxtToOF
+"set shortmess=
 
 " Statusline
 set noshowmode 			 " don't show the statusbar
+"set noshowcmd 			 
 set statusline=
 set statusline+=%0*[\ %N\ ]%*             "buffer number
 set statusline+=%0*\ %<%F%*               "full path
