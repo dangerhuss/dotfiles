@@ -4,7 +4,7 @@ SUBDIRS := $(subst /.,,$(wildcard */.))
 LINKCMD := @ln -nsf
 BREWCMD := @brew
 
-$(TOPTARGETS): brew zsh python vim $(SUBDIRS)
+$(TOPTARGETS): brew python zsh vim ssh $(SUBDIRS)
 $(SUBDIRS):
 	@if [ -f '$@/makefile' ]; then $(MAKE) -C $@ LINKCMD="$(LINKCMD)" BREWCMD="$(BREWCMD)"; fi 
 

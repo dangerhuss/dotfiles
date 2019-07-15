@@ -3,10 +3,10 @@ LINKCMD := @ln -nsf
 
 install: link
 	$(BREWCMD) install git
-	git submodule init
+	git submodule update --recursive --init
 upgrade:
 	-$(BREWCMD) upgrade git
-	git submodule update
+	git submodule update --recursive --init
 
 link: $(wildcard *.git) 
 %.git:

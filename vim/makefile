@@ -1,13 +1,14 @@
 BREWCMD := @brew
 LINKCMD := @ln -nsf
 
-install: link plug venv
+install: init link plug venv
 	$(BREWCMD) install neovim
-	mkdir -p ~/.config/nvim
 upgrade:
 	$(BREWCMD) reinstall neovim
+init:
+	mkdir -p "$(HOME)/.config/nvim"
 link: $(wildcard *.vim)
-%.vim:
+%.vim: init
 	$(LINKCMD) "$(realpath $@)" "$(HOME)/.config/nvim/$@"
 
 plug:
@@ -18,6 +19,7 @@ venv:
 	mkdir -p ~/.virtualenvs
 	virtualenv ~/.virtualenvs/neovim2 -p python2
 	~/.virtualenvs/neovim2/bin/pip install neovim
+
 	virtualenv ~/.virtualenvs/neovim3 -p python3
 	~/.virtualenvs/neovim3/bin/pip install neovim
 	~/.virtualenvs/neovim3/bin/pip install frosted
@@ -25,4 +27,4 @@ venv:
 	~/.virtualenvs/neovim3/bin/pip install pydocstyle
 	~/.virtualenvs/neovim3/bin/pip install flake8
 
-.PHONY: upgrade install link
+.PHONY: upgrade install link init

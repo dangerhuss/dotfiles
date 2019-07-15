@@ -6,9 +6,13 @@ export DOT="$SRC/dotfiles"
 export ZSH="$DOT/zsh/oh-my-zsh"
 export ZSH_CUSTOM="$DOT/zsh/custom"
 
+# Python
+# export PATH="$(python2 -m site --user-base)/bin:$PATH"
+# export PATH="$(python3 -m site --user-base)/bin:$PATH"
+
 # Brew
-export BREW="$DOT/brew/homebrew"
-export PATH="$BREW/bin:$PATH"
+export BREW=$(dirname $(which brew))
+export PATH="$BREW:$PATH"
 
 # Go
 export GOPATH="$HOME/go"

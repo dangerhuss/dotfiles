@@ -26,12 +26,3 @@ venv() {
     [[ -n "$VIRTUAL_ENV" ]] && echo "[${VIRTUAL_ENV##*/}]"
 }
 
-grbm() {
-	local b="$(git_current_branch)"
-	gwip
-	gcm
-	gup
-	gco "${b}"
-	git rebase master
-	gunwip
-}

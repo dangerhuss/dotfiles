@@ -43,6 +43,7 @@ nmap <silent> <leader>ev :e $DOT/vim/init.vim<CR>  " edit
 nmap <silent> <leader>sv :so $DOT/vim/init.vim<CR> " source
 
 " Resize Width
+set noequalalways 		" If you don't want vim to make splits equal everytime you split or switch to a window
 nnoremap <silent> <Leader>+ :exe "vertical resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "vertical resize " . (winheight(0) * 2/3)<CR>
 

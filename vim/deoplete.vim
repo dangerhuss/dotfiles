@@ -11,8 +11,8 @@ let g:deoplete#ignore_sources = {}
 set completeopt=menuone,noinsert,noinsert,noselect
 
 " <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> deoplete#mappings#smart_close_popup()."\<C-h>"
-inoremap <expr><BS>  deoplete#mappings#smart_close_popup()."\<C-h>"
+inoremap <expr><C-h> deoplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
 " <TAB>, <C-j> Next Completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-j>  pumvisible() ? "\<C-n>" : "\<C-j>"
@@ -22,6 +22,6 @@ inoremap <expr><C-k>  pumvisible() ? "\<C-p>" : "\<C-k>"
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function() abort
-  return deoplete#mappings#close_popup() . "\<CR>"
+  return deoplete#close_popup() . "\<CR>"
 endfunction
 

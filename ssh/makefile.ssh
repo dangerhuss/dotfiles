@@ -1,2 +1,2 @@
 id_rsa:
-	ssh-keygen -t rsa -b 4096 -C "ahuss@apple.com"
+	ssh-keygen -t rsa -b 4096 -C "git@ahuss.com" -N "" -f $@
