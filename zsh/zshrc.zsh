@@ -27,3 +27,6 @@ fi
 #if [ -z ${TMUX} ]; then
         #tmux new-session -A -s default
 #fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

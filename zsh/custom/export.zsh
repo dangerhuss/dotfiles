@@ -8,7 +8,7 @@ export ZSH_CUSTOM="$DOT/zsh/custom"
 
 # Python
 # export PATH="$(python2 -m site --user-base)/bin:$PATH"
-# export PATH="$(python3 -m site --user-base)/bin:$PATH"
+export PATH="$(python3 -m site --user-base)/bin:$PATH"
 
 # Brew
 export BREW=$(dirname $(which brew))
